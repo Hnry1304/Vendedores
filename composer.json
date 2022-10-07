@@ -1,0 +1,17 @@
+{
+    "name": "henry/proyecto",
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "src/Controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "henry"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.4",
+        "bramus/router": "~1.6"
+    }
+}
