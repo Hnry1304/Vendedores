@@ -1,13 +1,19 @@
 <?php
     
+    use \Controllers\Home;
+
     $router = new \Bramus\Router\Router();
 
-    // Define routes
-    // ...
-
-    // Run it!
+    
     $router->get('/', function(){
-        echo 'Hello World';
+        $home = new Home;
+        $home->Read();
+    });
+    
+    //Agregamos nuevos datos a la base de datos
+    $router->post('/create',function(){
+        $create = new Home;
+        $create->Create();
     });
     
     $router->run();
