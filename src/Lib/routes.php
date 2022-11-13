@@ -1,6 +1,8 @@
 <?php
     
-    use \Controllers\Home;
+    use Controllers\Controllers\Home;
+    use Controllers\Controllers\migrarDatos;
+    use Controllers\Controllers\Vendedores;
 
     $router = new \Bramus\Router\Router();
 
@@ -16,4 +18,15 @@
         $create->Create();
     });
     
+    $router->get('/vendedor/{vendedor}', function($vendedor){
+        $nombre = new Vendedores;
+        $nombre->readVendors($vendedor);
+    });
+    
+
+    $router->get('/migrar', function(){
+        $migrate = new migrarDatos;
+        
+    });
+
     $router->run();
