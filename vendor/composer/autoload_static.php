@@ -9,6 +9,7 @@ class ComposerStaticInit7aa39b7ea5410a1bd10a8f12db265f6e
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'da253f61703e9c22a5a34f228526f05a' => __DIR__ . '/..' . '/wixel/gump/gump.class.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -20,6 +21,10 @@ class ComposerStaticInit7aa39b7ea5410a1bd10a8f12db265f6e
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
+        'G' => 
+        array (
+            'GUMP\\' => 5,
         ),
         'C' => 
         array (
@@ -40,9 +45,13 @@ class ComposerStaticInit7aa39b7ea5410a1bd10a8f12db265f6e
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'GUMP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wixel/gump/src',
+        ),
         'Controllers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Controllers',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
