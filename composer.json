@@ -2,7 +2,7 @@
     "name": "henry/proyecto",
     "autoload": {
         "psr-4": {
-            "Controllers\\": "src/Controllers"
+            "Controllers\\": "src/"
         }
     },
     "authors": [
@@ -12,6 +12,7 @@
     ],
     "require": {
         "twig/twig": "^3.4",
-        "bramus/router": "~1.6"
+        "bramus/router": "~1.6",
+        "wixel/gump": "^1.11"
     }
 }
