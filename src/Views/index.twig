@@ -1,13 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Project1/src/Public/Css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                {% include "navbar.twig" %}
+            </div>
+            
+            <div class="col-10">
+
+                <form action="/Project1/create" method="post">
+                    <label for="vendedor">
+                        vendedor
+                        <select name="vendedor">
+                            <option value="Erika">Erika</option>
+                            <option value="Lorena">Lorena</option>
+                            <option value="Adal">Adal</option>
+                        </select>
+                    </label> <br>
+        
+                    <label for="Producto">
+                        Producto
+                        <select name="producto">
+                            <option value="Sudadera">Sudadera</option>
+                            <option value="Playera">Playera</option>
+                            <option value="Taza mayoreo">Taza Mayoreo</option>
+                            <option value="Tazas">Tazas</option>
+                            <option value="Gorras">Gorras</option>
+                            <option value="Estampados">Estampado</option>
+                        </select>
+                    </label> <br>
+        
+                    <label for="Ganancia">
+                        Ganancia
+                        <select name="ganancia">
+                            <option value="10">Taza</option>
+                            <option value="25">Playera</option>
+                            <option value="25">Sudadera</option>
+                            <option value="40">Estampado</option>
+                        </select>
+                    </label> <br>
+        
+                    <label for="Cantidad">
+                        Cantidad
+                        <input type="number" name="cantidad">
+                        {{errores['cantidad']}}
+                    </label><br>
+        
+                    <input type="submit" value="Agregar">
+                </form>
+        
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Ganancia Unitaria</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in datos %}
+                        <tr>
+                            <th scope="row">{{ data['nombre'] }}</th>
+                            <th scope="row">{{ data['producto'] }}</th>
+                            <th scope="row">{{ data['cantidad'] }}</th>
+                            <th scope="row">{{ data['ganancia'] }}</th>
+                        </tr>
+                        {% endfor %}
+        
+                    </tbody>
+                </table>
+                <a href="migrar/">Cerrar</a>
+            </div>
+        </div>
+       
+    </div>
 </body>
+<script src="/Project1/src/Public/Js/bootstrap.bundle.min.js"></script>
+
 </html>
