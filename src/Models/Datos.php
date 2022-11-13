@@ -1,10 +1,9 @@
 <?php
-    namespace Models;
+    namespace Controllers\Models;
 
     class Datos{
 
         public function __construct(){
-            
             $this->nombre;
             $this->producto;
             $this->cantidad;
