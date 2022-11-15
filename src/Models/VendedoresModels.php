@@ -14,7 +14,7 @@
 
         public function readTable($nombre){
 
-            $sql = "SELECT *FROM ventas WHERE nombre = :name";
+            $sql = "SELECT *FROM vendedores WHERE nombre = :name";
 
             $statement = $this->conexion->prepare($sql);
 
