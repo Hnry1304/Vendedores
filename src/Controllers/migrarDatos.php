@@ -11,5 +11,7 @@
             $this->m = new MigrarModels;
             $this->m->migrar();
             $this->m->deleteTemporal();
+
+            header("Location: /Project1");
         }
     }
