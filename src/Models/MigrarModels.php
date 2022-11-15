@@ -38,4 +38,12 @@
                 ));
             }
         }
+
+        public function deleteTemporal(){
+
+            $sql = "DELETE FROM ventas";
+
+            $stament = $this->conexion->prepare($sql);
+            $stament->execute();
+        }
     }
